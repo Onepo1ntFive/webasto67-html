@@ -1,0 +1,48 @@
+.breadcrumbs {
+    padding-top: 1.5rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 5rem;
+    }
+
+    a,
+    span {
+        position: relative;
+        margin-right: 0.7rem;
+        padding-left: 1.7rem;
+
+        &:link,
+        &:visited {
+            font-size: 1.2rem;
+            color: $color-blue;
+        }
+        &:hover {
+            color: $color-font-gray;
+
+            &::before {
+                color: $color-font-gray;
+            }
+        }
+        &::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: -0.1em;
+        }
+        &:first-child {
+            padding-left: 0;
+            &::before {
+                display: none;
+            }
+        }
+        &:last-child {
+            &:link,
+            &:visited {
+                color: $color-font-gray;
+            }
+        }
+    }
+}
