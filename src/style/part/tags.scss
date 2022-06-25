@@ -1,0 +1,61 @@
+.tags {
+    margin-bottom: 3.5rem;
+
+    &__title {
+        margin-bottom: 1rem;
+        font-weight: 700;
+        font-size: 1.4rem;
+
+        @media (min-width: $breakpoint-tablet) {
+            font-size: 1.6rem;
+        }
+    }
+    &__items {
+        display: flex;
+        flex-flow: row wrap;
+
+        a {
+            &:link,
+            &:visited {
+                padding-bottom: 0.5rem;
+                margin-right: 3rem;
+                font-size: 1.4rem;
+                color: $color-font;
+                transition: color 0.2s ease-in-out;
+
+                @media (min-width: $breakpoint-tablet) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            &:hover {
+                color: $color-blue;
+
+                span {
+                    color: $color-font-gray;
+                }
+            }
+
+            &:last-child {
+                margin-right: 0;
+                width: 100%;
+
+                @media (min-width: $breakpoint-tablet) {
+                    width: auto;
+                }
+
+                &:link,
+                &:visited {
+                    color: $color-blue;
+                }
+                &:hover {
+                    color: $color-font-gray;
+                }
+            }
+            span {
+                padding-left: 0.5rem;
+                color: $color-font-gray;
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+@import "./libs/nouislider";
+
 @import "./part/_var";
 @import "./part/_reset";
 @import "./part/_fonts";
@@ -9,3 +11,8 @@
 @import "./part/_footer";
 
 @import "./part/breadcrumbs";
+@import "./part/tags";
+@import "./part/catalog";
+@import "./part/filter";
+@import "./part/form";
+@import "./part/paginations";

@@ -41,32 +41,30 @@
 .l-footer {
 }
 /*----------*/
-.aricle-section {
+.wrap {
+    width: 100%;
+    min-height: 100%;
     position: relative;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
+    z-index: 1;
+    overflow: hidden;
+}
+.temp-wrap {
+    padding-left: 15px;
+    padding-right: 15px;
     display: block;
-    overflow-x: auto;
-    overflow-y: auto;
-    height: auto;
     max-width: 1600px;
     min-height: 100%;
     margin-right: auto;
-    margin-bottom: -142px;
     margin-left: auto;
-    padding-bottom: 142px;
-    clear: none;
     background-color: white;
-    text-align: center;
-}
-.wrap {
-    position: relative;
-    display: inline-block;
-    margin-top: 90px;
-    margin-bottom: 90px;
-    padding-right: 40px;
-    padding-left: 40px;
-    text-align: left;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    @media (min-width: $breakpoint-desktop) {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
 }
 /*----------*/

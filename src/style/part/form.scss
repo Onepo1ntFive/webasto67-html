@@ -1,0 +1,677 @@
+.b-form {
+    margin-bottom: 10rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    .h1 {
+        margin-bottom: 4rem;
+    }
+
+    & > p {
+        margin-bottom: 1em;
+
+        & + form {
+            padding-top: 2rem;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .form__item {
+        padding-bottom: 3rem;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+    .form__separator {
+        margin-bottom: 3rem;
+        font-family: $font-family-robotoslab;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 3rem;
+        }
+
+        span {
+            padding-right: 1rem;
+            background-color: $color-white;
+        }
+        p {
+            padding-top: 1.5rem;
+            font-family: $font-family;
+            font-size: 1.6rem;
+            text-transform: none;
+            font-weight: normal;
+            color: $color-font-gray;
+        }
+    }
+    .form__error {
+        padding-top: 0.5rem;
+        font-size: 1.3rem;
+        color: $color-red;
+    }
+    .form__inputs {
+        margin: 0 -1.5rem;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .form__input {
+        padding: 0 1.5rem;
+        width: 100%;
+        margin-bottom: 3rem;
+
+        @media (min-width: $breakpoint-desktop) {
+            width: 50%;
+        }
+
+        &--x2 {
+            @media (min-width: $breakpoint-desktop) {
+                width: 100%;
+            }
+        }
+        &--group {
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+
+            .form__input-group {
+                padding-bottom: 2rem;
+                margin-right: 2rem;
+                width: 100%;
+
+                @media (min-width: $breakpoint-tablet) {
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    width: auto;
+                }
+
+                &:last-child {
+                    padding-bottom: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+    .form__input-title {
+        font-size: 1.5rem;
+        padding-bottom: 1rem;
+        color: $color-font-gray;
+    }
+    .form__photos {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-flow: row wrap;
+
+        .form__fileupload {
+            margin-bottom: 1rem;
+            margin-right: 1rem;
+            max-width: calc(20% - 1rem);
+
+            @media (min-width: $breakpoint-tablet) {
+                margin-bottom: 0;
+                max-width: none;
+            }
+        }
+    }
+    .form__photos-title {
+        padding-bottom: 1rem;
+        width: 100%;
+        font-family: $font-family;
+        font-weight: 700;
+        font-size: 1.4rem;
+    }
+    .form__photos-hint {
+        padding-top: 1rem;
+        width: 100%;
+        color: $color-font-gray;
+        font-size: 1.5rem;
+    }
+    .form__footer {
+        margin-top: -2rem;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        @media (min-width: $breakpoint-tablet) {
+            margin-top: 0;
+            justify-content: space-between;
+        }
+    }
+    .form__agree {
+        padding-bottom: 2rem;
+        font-size: 1.4rem;
+        line-height: 1.2;
+        text-align: center;
+        color: $color-font-gray;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        a {
+            border-bottom: 1px solid $color-font-gray;
+            color: $color-font-gray;
+            transition: border 0.2s ease-in-out;
+        }
+        a:hover {
+            border-bottom-color: transparent;
+        }
+    }
+    .form__btn {
+        width: 100%;
+
+        @media (min-width: $breakpoint-tablet) {
+            max-width: 25rem;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            max-width: 40rem;
+        }
+
+        button {
+            padding: 1.5rem 2rem;
+            border: 0;
+            border-radius: 0.5rem;
+            display: block;
+            width: 100%;
+            background: $color-red;
+            opacity: 1;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 1.5rem;
+            color: $color-white;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 0.75;
+            }
+        }
+    }
+    .form__fileupload {
+        position: relative;
+        display: inline-block;
+        vertical-align: bottom;
+
+        input[type='file'] {
+            position: absolute;
+            bottom: 100%;
+            left: 0;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .form__fileupload-load {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            border: 1px solid $color-lightgray;
+            border-radius: 0.5rem;
+            background: url('../img/add-photo.svg') 50% 50% no-repeat;
+            transition-property: background, border;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $color-blue;
+            }
+
+            &.loaded {
+                opacity: 0;
+                pointer-events: none;
+            }
+        }
+        .form__fileupload-image {
+            border: 1px solid $color-gray2;
+            border-radius: 0.5rem;
+            width: 7rem;
+            height: 7rem;
+            object-fit: cover;
+            max-width: 100%;
+        }
+        .form__fileupload-remove {
+            display: none;
+            position: absolute;
+            border: 1px solid $color-lightgray;
+            top: calc(100% - 1rem);
+            left: 50%;
+            margin-left: -1rem;
+            width: 2rem;
+            height: 2rem;
+            z-index: 2;
+            border-radius: 0.4rem;
+            background: url('../img/close-cross-green.svg') 50% 50%/1.4rem no-repeat $color-lightgray;
+            transition-property: background, opacity, border;
+            transition-duration: 0.2s;
+            transition-timing-function: ease-in-out;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $color-blue;
+            }
+        }
+    }
+    /*----*/
+    &--popup {
+        .form__input {
+            width: 100%;
+
+            @media (min-width: $breakpoint-desktop) {
+                width: 100%;
+            }
+        }
+    }
+    &--review {
+        .b-button {
+            margin: auto;
+            max-width: 36rem;
+        }
+        .form__agree {
+            margin: auto;
+            max-width: 50rem;
+        }
+    }
+}
+/*----------*/
+.b-input {
+    position: relative;
+
+    label {
+        background-color: $color-white;
+        display: inline-block;
+        position: absolute;
+        left: 2rem;
+        top: 1.5rem;
+        color: $color-font-gray;
+        font-size: 1.6rem;
+        pointer-events: none;
+        transition-property: top, font-size, margin;
+        transition-duration: 0.1s;
+        transition-timing-function: ease-in-out;
+    }
+    input,
+    textarea {
+        padding: 1.7rem 2rem;
+        border: 1px solid $color-lightgray;
+        border-radius: 0.5rem;
+        background-color: $color-white;
+        font-size: 1.5rem;
+        width: 100%;
+        transition: border-color 0.2s ease-in-out;
+
+        &:not(:placeholder-shown),
+        &:focus {
+            padding-top: calc(1.7rem + 0.7rem);
+            padding-bottom: 1rem;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $color-blue;
+        }
+
+        &:focus ~ label,
+        &:valid ~ label {
+            font-size: 1.3rem;
+            top: 0.5rem;
+        }
+    }
+    textarea {
+        min-height: 10rem;
+        resize: vertical;
+    }
+}
+/*----------*/
+.b-inputbox {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    width: 100%;
+
+    input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        pointer-events: none;
+
+        &:checked ~ .inputbox__input {
+            background-color: $color-blue;
+            border-color: $color-blue;
+        }
+        &:checked ~ .inputbox__input::before {
+            opacity: 1;
+        }
+    }
+
+    &:hover {
+        .inputbox__input {
+            border-color: $color-blue;
+        }
+    }
+
+    .inputbox__input {
+        margin-right: 1rem;
+        position: relative;
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid $color-gray2;
+        cursor: pointer;
+        transition-property: border-color, background;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        &:hover {
+            border-color: $color-blue;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out;
+        }
+    }
+    .inputbox__label {
+        position: relative;
+        cursor: pointer;
+        flex: 1;
+
+        ins {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            font-size: 1.4rem;
+            text-decoration: none;
+            color: $color-font-gray;
+        }
+    }
+
+    &--radio {
+        .inputbox__input {
+            border-radius: 100rem;
+
+            &::before {
+                width: 0.6rem;
+                height: 0.6rem;
+                background: url('../img/circle.svg') 50% 50% no-repeat;
+            }
+        }
+    }
+    &--checkbox {
+        .inputbox__input {
+            border-radius: 100rem;
+
+            &::before {
+                width: 1.1rem;
+                height: 0.8rem;
+                background: url('../img/check.svg') 50% 50% no-repeat;
+            }
+        }
+    }
+}
+/*----------*/
+.b-rating {
+    overflow: hidden;
+}
+.rating {
+    border: none;
+    float: left;
+
+    & > input {
+        display: none;
+    }
+    & > label:before {
+        width: 2.5rem;
+        height: 2.5rem;
+        display: block;
+        background: url('../img/stars-empty.svg') 50% 50%/25px auto no-repeat;
+        content: '';
+    }
+    & > label {
+        position: relative;
+        color: #ddd;
+        float: right;
+        cursor: pointer;
+    }
+    & > input:checked ~ label,
+    &:not(:checked) > label:hover,
+    &:not(:checked) > label:hover ~ label {
+        background: url('../img/stars-full.svg') 50% 50%/25px no-repeat;
+    }
+    & > input:checked + label:hover,
+    & > input:checked ~ label:hover,
+    & > label:hover ~ input:checked ~ label,
+    & > input:checked ~ label:hover ~ label {
+        background: url('../img/stars-full.svg') 50% 50%/25px no-repeat;
+    }
+
+    &--notouch {
+        pointer-events: none;
+    }
+    &--big > label {
+        border-radius: 100rem;
+        background-color: $color-lightgray;
+    }
+    &--big > label:before {
+        width: 5rem;
+        height: 5rem;
+    }
+    &--big > input:checked ~ label,
+    &--big:not(:checked) > label:hover,
+    &--big:not(:checked) > label:hover ~ label {
+        width: 5rem;
+        height: 5rem;
+        background-color: $color-lightgray;
+    }
+    &--big > input:checked + label:hover,
+    &--big > input:checked ~ label:hover,
+    &--big > label:hover ~ input:checked ~ label,
+    &--big > input:checked ~ label:hover ~ label {
+        background-color: $color-lightgray;
+    }
+}
+/*----------*/
+.b-select {
+    position: relative;
+
+    label {
+        background-color: $color-white;
+        display: inline-block;
+        position: absolute;
+        left: 2rem;
+        top: 1.5rem;
+        color: $color-font-gray;
+        font-size: 1.6rem;
+        pointer-events: none;
+        transition: top 0.2s ease-in-out;
+    }
+
+    select.active ~ label {
+        top: 0.5rem;
+        font-size: 1.3rem;
+    }
+    // select lib
+    .ss-main > .ss-single-selected {
+        padding: 1.7rem 2rem;
+        border: 1px solid $color-lightgray;
+        border-radius: 0.5rem;
+        height: 5.4rem;
+        font-size: inherit;
+        transition-property: border-color, color, padding, font-size;
+        transition-duration: 0.2s;
+        transition-timing-function: ease-in-out;
+
+        &.ss-open-above,
+        &.ss-open-below,
+        &:hover {
+            border-color: $color-blue;
+        }
+
+        &.ss-open-above,
+        &.ss-open-below {
+            border-radius: 0.5rem 0.5rem 0 0;
+        }
+
+        .ss-arrow {
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            right: 0.3rem;
+            top: 0.3rem;
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 0.5rem;
+            background-color: $color-lightgray;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -1.2rem;
+                margin-left: -1.2rem;
+                width: 2.4rem;
+                height: 2.4rem;
+                background: url('../img/icon-chevron.svg') 50% 50% no-repeat;
+                transition: transform 0.2s ease-in-out;
+            }
+
+            & > span {
+                display: none;
+            }
+        }
+        &.ss-open-above,
+        &.ss-open-below {
+            .ss-arrow {
+                &::before {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+    .ss-content {
+        margin-top: 0;
+        border: 0;
+        box-shadow: 0px 5px 30px rgba(41, 45, 50, 0.05);
+        border-radius: 5px;
+    }
+    .ss-content .ss-list .ss-option.ss-disabled {
+        color: $color-blue;
+    }
+    .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
+        background: none;
+        color: $color-blue;
+    }
+    .ss-content .ss-list .ss-option:hover,
+    .ss-content .ss-list .ss-option.ss-highlighted {
+        background-color: $color-blue;
+        color: $color-white;
+    }
+    select.active ~ .ss-main > .ss-single-selected {
+        padding-top: calc(1.7rem + 0.7rem);
+        padding-bottom: 1rem;
+    }
+}
+/*----------*/
+.b-count {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid $color-lightgray3;
+    border-radius: 0.5rem;
+    display: flex;
+    text-align: center;
+    flex-flow: row nowrap;
+
+    .count__content {
+        width: calc(100% - 2.4rem - 2.4rem);
+        min-width: 5rem;
+        flex: 1 auto;
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .count__title {
+        display: block;
+        font-size: 1.3rem;
+        line-height: 1;
+        text-decoration: none;
+        color: $color-font-gray;
+    }
+
+    span {
+        position: relative;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            margin-left: -0.7rem;
+            margin-top: -0.1rem;
+            content: '';
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            border-radius: 1rem;
+            width: 1.4rem;
+            height: 0.2rem;
+            background-color: $color-blue;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        &:hover::before,
+        &:hover::after {
+            background-color: $color-font;
+        }
+
+        &.count__minus::before {
+        }
+        &.count__minus::after {
+            display: none;
+        }
+        &.count__plus::after {
+            transform-origin: center center;
+            transform: rotate(-90deg);
+        }
+    }
+    input {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        width: 100%;
+        flex: 1 auto;
+        text-align: center;
+        -webkit-appearance: none;
+    }
+    //
+    &--small {
+        max-width: 11rem;
+
+        .count__content {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        // span {
+        //     width: 3rem;
+        //     height: 3rem;
+        // }
+    }
+}

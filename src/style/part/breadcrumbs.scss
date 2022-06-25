@@ -1,11 +1,11 @@
 .breadcrumbs {
     padding-top: 1.5rem;
-    padding-bottom: 3rem;
+    padding-bottom: 1.5rem;
     display: flex;
     flex-flow: row wrap;
 
     @media (min-width: $breakpoint-tablet) {
-        padding-bottom: 5rem;
+        padding-bottom: 1.5rem;
     }
 
     a,
@@ -31,6 +31,7 @@
             position: absolute;
             left: 0;
             top: -0.1em;
+            color: $color-font-gray;
         }
         &:first-child {
             padding-left: 0;
