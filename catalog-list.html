@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="temp-wrap w-section">
+            <nav class="breadcrumbs">
+                <a href="#">Главная</a>
+                <a href="#">Webasto</a>
+                <a href="#">Воздушные отопители Webasto </a>
+            </nav>
+            <h1>Тахограф</h1>
+            <div class="tags">
+                <div class="tags__title">Популярные подборки</div>
+                <nav class="tags__items">
+                    <a href="#">Tахограф на коммерческий транспорт <span>5</span></a>
+                    <a href="#">Тахограф для автобуса <span>15</span></a>
+                    <a href="#">Тахограф на полуприцеп <span>2</span></a>
+                    <a href="#">Тахограф на MAN <span>52</span></a>
+                    <a href="#">Тахограф VDO  <span>1</span></a>
+                    <a href="#">Покзать еще</a>
+                </nav>
+            </div>
+            <div class="topbar">
+                <div class="topbar__filter">
+                    <div class="b-filter-btn">
+                        <span class="js-filter-show">Все фильтры <img src="./img/icon-filter.svg" alt=""></span>
+                    </div>
+                    <div class="b-filter-wrap js-filter-wrap">
+                        <div class="filter-wrap__inner js-filter-wrap-inner">
+                            <div class="filter-wrap__content">
+                                <div class="b-filter-fixed js-filter-block">
+                                    <div class="filter-fixed__title"> Фильтр <span class="filter-fixed__close js-filter-close"><img src="./img/close.svg" alt=""></span>
+                                    </div>
+                                    <div class="filter-fixed__content">
+                                        <div class="b-filter js-filter">
+                                            <div class="filter__inner">
+                                                <div class="filter__collapse js-collapse">
+                                                    <div class="filter__title js-collapse-title">Цена</div>
+                                                    <div class="filter__content">
+                                                        <div class="filter__range js-range">
+                                                            <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                                                            <div class="filter__range-slider">
+                                                                <div class="js-range-slider"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__collapse js-collapse">
+                                                    <div class="filter__title js-collapse-title">Сортировать</div>
+                                                    <div class="filter__content">
+                                                        <div class="filter__items">
+                                                            <div class="filter__item filter__item--radio">
+                                                                <div class="b-inputbox b-inputbox--radio">
+                                                                    <input type="radio" name="radio-1" id="radio-1">
+                                                                    <label class="inputbox__input" for="radio-1"></label>
+                                                                    <label class="inputbox__label" for="radio-1">По умолчанию</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--radio">
+                                                                <div class="b-inputbox b-inputbox--radio">
+                                                                    <input type="radio" name="radio-1" id="radio-2">
+                                                                    <label class="inputbox__input" for="radio-2"></label>
+                                                                    <label class="inputbox__label" for="radio-2">По уменьшению цены</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--radio">
+                                                                <div class="b-inputbox b-inputbox--radio">
+                                                                    <input type="radio" name="radio-1" id="radio-3">
+                                                                    <label class="inputbox__input" for="radio-3"></label>
+                                                                    <label class="inputbox__label" for="radio-3">По возрастанию цены</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__collapse js-collapse">
+                                                    <div class="filter__title js-collapse-title">Производитель</div>
+                                                    <div class="filter__content">
+                                                        <div class="filter__items">
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                                                                    <label class="inputbox__input" for="checkbox-1"></label>
+                                                                    <label class="inputbox__label" for="checkbox-1">Производитель</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                                                                    <label class="inputbox__input" for="checkbox-2"></label>
+                                                                    <label class="inputbox__label" for="checkbox-2">Производитель</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-3" id="checkbox-3">
+                                                                    <label class="inputbox__input" for="checkbox-3"></label>
+                                                                    <label class="inputbox__label" for="checkbox-3">Производитель</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="filter__collapse js-collapse">
+                                                    <div class="filter__title js-collapse-title">Напряжение питания</div>
+                                                    <div class="filter__content">
+                                                        <div class="filter__items">
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-4" id="checkbox-4">
+                                                                    <label class="inputbox__input" for="checkbox-4"></label>
+                                                                    <label class="inputbox__label" for="checkbox-4">Напряжение питания</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-5" id="checkbox-5">
+                                                                    <label class="inputbox__input" for="checkbox-5"></label>
+                                                                    <label class="inputbox__label" for="checkbox-5">Напряжение питания</label>
+                                                                </div>
+                                                            </div>
+                                                            <div class="filter__item filter__item--checkbox">
+                                                                <div class="b-inputbox b-inputbox--checkbox">
+                                                                    <input type="checkbox" name="checkbox-6" id="checkbox-6">
+                                                                    <label class="inputbox__input" for="checkbox-6"></label>
+                                                                    <label class="inputbox__label" for="checkbox-6">Напряжение питания</label>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="filter__btns">
+                                                <div class="filter__reset">
+                                                    <span>Очистить всё <img src="./img/spin-gray.svg" alt=""></span>
+                                                </div>
+                                                <div class="filter__submit">
+                                                    <span>Применить</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-filter-desktop js-filter-desktop">
+                        <div class="filter-desktop__inner">
+                            <div class="filter-desktop__title"> Фильтр <span class="filter-desktop__close js-filter-desktop-close"><img src="./img/cross.svg" alt=""></span>
+                            </div>
+                            <div class="filter-desktop__filter">
+                                <div class="b-filter b-filter--desktop">
+                                    <div class="filter__inner">
+                                        <div class="filter__collapse">
+                                            <div class="filter__title ">Сортировать</div>
+                                            <div class="filter__content">
+                                                <div class="filter__items">
+                                                    <div class="filter__item filter__item--radio">
+                                                        <div class="b-inputbox b-inputbox--radio">
+                                                            <input type="radio" name="radio-1" id="radio-7">
+                                                            <label class="inputbox__input" for="radio-7"></label>
+                                                            <label class="inputbox__label" for="radio-7">По умолчанию</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--radio">
+                                                        <div class="b-inputbox b-inputbox--radio">
+                                                            <input type="radio" name="radio-1" id="radio-8">
+                                                            <label class="inputbox__input" for="radio-8"></label>
+                                                            <label class="inputbox__label" for="radio-8">По уменьшению цены</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--radio">
+                                                        <div class="b-inputbox b-inputbox--radio">
+                                                            <input type="radio" name="radio-1" id="radio-9">
+                                                            <label class="inputbox__input" for="radio-9"></label>
+                                                            <label class="inputbox__label" for="radio-9">По возрастанию цены</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__collapse">
+                                            <div class="filter__title ">Цена</div>
+                                            <div class="filter__content">
+                                                <div class="filter__range js-range">
+                                                    <input type="text" class="js-range-min"><span>&mdash;</span><input type="text" class="js-range-max">
+                                                    <div class="filter__range-slider">
+                                                        <div class="js-range-slider"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__collapse">
+                                            <div class="filter__title ">Ширина теплицы</div>
+                                            <div class="filter__content">
+                                                <div class="filter__items">
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-14" id="checkbox-14">
+                                                            <label class="inputbox__input" for="checkbox-14"></label>
+                                                            <label class="inputbox__label" for="checkbox-14">4,0 метра</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-5" id="checkbox-5">
+                                                            <label class="inputbox__input" for="checkbox-15"></label>
+                                                            <label class="inputbox__label" for="checkbox-15">3 метра</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-16" id="checkbox-16">
+                                                            <label class="inputbox__input" for="checkbox-16"></label>
+                                                            <label class="inputbox__label" for="checkbox-16">3 метра</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="filter__collapse">
+                                            <div class="filter__title ">Шаг между дугами</div>
+                                            <div class="filter__content">
+                                                <div class="filter__items">
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-7" id="checkbox-7">
+                                                            <label class="inputbox__input" for="checkbox-7"></label>
+                                                            <label class="inputbox__label" for="checkbox-7">1 метр</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-8" id="checkbox-8">
+                                                            <label class="inputbox__input" for="checkbox-8"></label>
+                                                            <label class="inputbox__label" for="checkbox-8">65 см</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="filter__item filter__item--checkbox">
+                                                        <div class="b-inputbox b-inputbox--checkbox">
+                                                            <input type="checkbox" name="checkbox-9" id="checkbox-9">
+                                                            <label class="inputbox__input" for="checkbox-9"></label>
+                                                            <label class="inputbox__label" for="checkbox-9">3 метра</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__btns">
+                                        <div class="filter__reset">
+                                            <span>Очистить всё</span>
+                                        </div>
+                                        <div class="filter__submit">
+                                            <span>Применить</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="b-filter-fixed-bg js-filter-bg js-filter-close"></div>
+                </div>
+                <div class="topbar__view hide-on-mobile">
+                    <a href="#" class="topbar__view-gallery active"></a>
+                    <a href="#" class="topbar__view-list"></a>
+                </div>
+            </div>
+            <!--  -->
+            <div class="b-minifilter">
+                <span>15 000 руб. - 44 000 руб. <ins></ins></span>
+                <span>VDO <ins></ins></span>
+                <span>12 v <ins></ins></span>
+                <div class="minifilter__reset">
+                    <span>Очистить всё <img src="./img/spin-gray.svg" alt=""></span>
+                </div>
+            </div>
+            <div class="catalog catalog--list">
+                <div class="catalog__items">
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog__item">
+                        <div class="catalog__inner">
+                            <div class="catalog__pic hide-on-mobile">
+                                <a href="#">
+                                    <picture>
+                                        <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                        <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                        <img src="./img/catalog-pic.jpg" alt="">
+                                    </picture>
+                                </a>
+                            </div>
+                            <div class="catalog__wrap">
+                                <div class="catalog__content">
+                                    <div class="catalog__reviews">
+                                        <a href="#">
+                                            <img src="./img/star-gold.svg" alt="">
+                                            <strong>4,5</strong>
+                                            <span>77 отзывов</span>
+                                        </a>
+                                    </div>
+                                    <div class="catalog__title">
+                                        <a href="#">Цифровой тахограф VDO DTCO 3283 с блоком СКЗИ</a>
+                                    </div>
+                                    <div class="catalog__details">
+                                        <div><span>Код товара:</span> 1463554</div>
+                                        <div><span>Блок СКЗИ:</span> да</div>
+                                        <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                                        <div><span>Вес:</span> 1350г</div>
+                                        <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                                    </div>
+                                    <div class="catalog__logo"><a href="#"><img src="./img/catalog-logo.png" alt=""></a></div>
+                                </div>
+                                <div class="catalog__pic hide-on-tablet hide-on-desktop">
+                                    <a href="#">
+                                        <picture>
+                                            <source srcset="./img/catalog-pic.webp" type="image/webp">
+                                            <source srcset="./img/catalog-pic.jpg" type="image/jpeg">
+                                            <img src="./img/catalog-pic.jpg" alt="">
+                                        </picture>
+                                    </a>
+                                </div>
+                                <div class="catalog__controls">
+                                    <div class="catalog__oldprice"><span>Цена:</span> 46 000 ₽</div>
+                                    <div class="catalog__price"><span>Новая цена:</span> 44 000 ₽</div>
+                                    <div class="catalog__footer">
+                                        <div class="catalog__count">
+                                            <div class="b-count b-count--small">
+                                                <span class="count__minus js-count-input-minus"></span>
+                                                <div class="count__content">
+                                                    <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                                                </div>
+                                                <span class="count__plus js-count-input-plus"></span>
+                                            </div>
+                                        </div>
+                                        <div class="catalog__btn">
+                                            <a href="#" class="b-button b-button--mw150">Купить</a>
+                                        </div>
+                                    </div>
+                                    <div class="catalog__available atalog__available--ok">в наличии > 10 шт</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load-more">
+                <a class="b-button b-button--gray" href="#">Показать ещё</a>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
