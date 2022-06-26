@@ -111,7 +111,9 @@ button.b-button {
     font-size: 1.6rem;
     color: $color-white;
     cursor: pointer;
-    transition: background 0.2s ease-in-out;
+    transition-property: background, color;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
 
     &:hover {
         background-color: $color-blue-h;
@@ -164,6 +166,75 @@ button.b-button {
     &--center {
         margin: auto;
         max-width: 25rem;
+    }
+    &--icon {
+        padding: 0;
+        margin: 0;
+        background: none;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        font-weight: normal;
+        color: $color-font;
+
+        &:hover {
+            background: none;
+            color: $color-blue;
+        }
+
+        img {
+            &:first-child {
+                margin-right: 1rem;
+            }
+            &:last-child {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+/*----------*/
+ul.ul {
+    margin-bottom: 3rem;
+    li {
+        padding-bottom: 2rem;
+        position: relative;
+        padding-left: 2.2rem;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0.5em;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 1rem;
+            background-color: $color-blue;
+        }
+    }
+}
+ol.ol {
+    margin-bottom: 3rem;
+    counter-reset: item;
+    li {
+        padding-bottom: 2rem;
+        position: relative;
+        padding-left: 2.2rem;
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+
+        &::before {
+            content: counter(item);
+            counter-increment: item;
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-weight: 900;
+            color: $color-blue;
+        }
     }
 }
 /*----------*/

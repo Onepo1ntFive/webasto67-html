@@ -101,8 +101,11 @@ $catalogClass: '.catalog';
             }
         }
         &__inner {
-            padding: 0 2.5rem;
             height: 100%;
+            
+            @media (min-width: $breakpoint-tablet) {
+                padding: 0 2.5rem;
+            }
         }
         &__pic {
             margin-bottom: 1.5rem;

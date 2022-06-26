@@ -1,0 +1,58 @@
+<div class="b-product">
+    <div class="product__gallery">
+        //= ./catalog-product-gallery.html
+    </div>
+        <div class="product__content-details">
+            <label for="select-111" class="select__title">Все варианты</label>
+            <div class="b-select">
+                <select id="select-111">
+                    <option selected disabled></option>
+                    <option>12 v</option>
+                    <option>12 v</option>
+                    <option>12 v</option>
+                    <option>12 v</option>
+                </select>
+            </div>
+            <div class="product__details">
+                <div><span>Код товара:</span> 1463554</div>
+                <div><span>Блок СКЗИ:</span> да</div>
+                <div><span>Размер:</span> 178 x 50 x 150 мм (Ш x В x Г)</div>
+                <div><span>Вес:</span> 1350г</div>
+                <div><span>Рабочее напряжение:</span> 24 В (12 В)</div>
+                <a class="js-scroll-to" data-target=".b-tabs-acc" href="#">Перейти к описанию</a>
+            </div>
+            <div class="product__producer">
+                <img src="./img/catalog-logo.png" alt="">
+            </div>
+        </div>
+        <div class="product__content-actions">
+            <div class="product__content-inner">
+                <div class="product__footer">
+                    <div class="product__oldprice"><span>Старая цена:</span> <ins>48 000 ₽</ins></div>
+                    <div class="product__price"><span>Цена:</span> 44 000 ₽</div>
+                </div>
+                <div class="product__btns">
+                    <div class="product__count">
+                        <div class="b-count b-count--small">
+                            <span class="count__minus js-count-input-minus"></span>
+                            <div class="count__content">
+                                <input class="js-count-input" type="text" value="1" maxlength="3" pattern="[0-9]{1,5}" onkeyup="this.value = this.value.replace(/[^\d]/g,'');">
+                            </div>
+                            <span class="count__plus js-count-input-plus"></span>
+                        </div>
+                    </div>
+                    <div class="product__btn">
+                        <a href="#" class="b-button js-modal-show-cart">Купить</a>
+                    </div>
+                </div>
+                <div class="product__available product__available--ok">в наличии > 10 шт</div>
+                <div class="product__devliv">
+                    <a href="#">Доставка</a>
+                    <a href="#">Самовывоз</a>
+                    <a href="#">Оплата</a>
+                </div>
+            </div>
+        </div>
+</div>
+<!--  -->
+//= ./catalog-tabs.html

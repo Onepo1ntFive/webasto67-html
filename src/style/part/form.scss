@@ -249,7 +249,7 @@
             height: 2rem;
             z-index: 2;
             border-radius: 0.4rem;
-            background: url('../img/close-cross-green.svg') 50% 50%/1.4rem no-repeat $color-lightgray;
+            background: url('../img/close-blue.svg') 50% 50%/1.4rem no-repeat $color-lightgray;
             transition-property: background, opacity, border;
             transition-duration: 0.2s;
             transition-timing-function: ease-in-out;
@@ -464,135 +464,65 @@
         pointer-events: none;
     }
     &--big > label {
+        margin-right: 1rem;
         border-radius: 100rem;
-        background-color: $color-lightgray;
+        background-color: $color-lightgray2;
     }
     &--big > label:before {
         width: 5rem;
         height: 5rem;
+        background: url('../img/stars-empty-b.svg') 50% 50%/25px auto no-repeat;
     }
     &--big > input:checked ~ label,
     &--big:not(:checked) > label:hover,
     &--big:not(:checked) > label:hover ~ label {
         width: 5rem;
         height: 5rem;
-        background-color: $color-lightgray;
+        background: url('../img/stars-full-b.svg') 50% 50%/25px no-repeat;
+        background-color: $color-lightgray2;
     }
     &--big > input:checked + label:hover,
     &--big > input:checked ~ label:hover,
     &--big > label:hover ~ input:checked ~ label,
     &--big > input:checked ~ label:hover ~ label {
-        background-color: $color-lightgray;
+        background: url('../img/stars-full-b.svg') 50% 50%/25px no-repeat;
+        background-color: $color-lightgray2;
     }
 }
 /*----------*/
 .b-select {
+    margin-bottom: 3rem;
     position: relative;
 
-    label {
-        background-color: $color-white;
-        display: inline-block;
+    &::before {
+        content: '';
+        display: block;
         position: absolute;
-        left: 2rem;
-        top: 1.5rem;
-        color: $color-font-gray;
-        font-size: 1.6rem;
+        right: 1rem;
+        top: 50%;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-top: -1.2rem;
+        background: url('../img/select-pin.svg') 50% 50% no-repeat;
         pointer-events: none;
-        transition: top 0.2s ease-in-out;
     }
 
-    select.active ~ label {
-        top: 0.5rem;
-        font-size: 1.3rem;
-    }
-    // select lib
-    .ss-main > .ss-single-selected {
-        padding: 1.7rem 2rem;
-        border: 1px solid $color-lightgray;
-        border-radius: 0.5rem;
-        height: 5.4rem;
-        font-size: inherit;
-        transition-property: border-color, color, padding, font-size;
-        transition-duration: 0.2s;
-        transition-timing-function: ease-in-out;
-
-        &.ss-open-above,
-        &.ss-open-below,
-        &:hover {
-            border-color: $color-blue;
-        }
-
-        &.ss-open-above,
-        &.ss-open-below {
-            border-radius: 0.5rem 0.5rem 0 0;
-        }
-
-        .ss-arrow {
-            margin: 0;
-            padding: 0;
-            position: absolute;
-            right: 0.3rem;
-            top: 0.3rem;
-            width: 4.8rem;
-            height: 4.8rem;
-            border-radius: 0.5rem;
-            background-color: $color-lightgray;
-
-            &::before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin-top: -1.2rem;
-                margin-left: -1.2rem;
-                width: 2.4rem;
-                height: 2.4rem;
-                background: url('../img/icon-chevron.svg') 50% 50% no-repeat;
-                transition: transform 0.2s ease-in-out;
-            }
-
-            & > span {
-                display: none;
-            }
-        }
-        &.ss-open-above,
-        &.ss-open-below {
-            .ss-arrow {
-                &::before {
-                    transform: rotate(-180deg);
-                }
-            }
-        }
-    }
-    .ss-content {
-        margin-top: 0;
-        border: 0;
-        box-shadow: 0px 5px 30px rgba(41, 45, 50, 0.05);
-        border-radius: 5px;
-    }
-    .ss-content .ss-list .ss-option.ss-disabled {
-        color: $color-blue;
-    }
-    .ss-content .ss-list .ss-option:not(.ss-disabled).ss-option-selected {
-        background: none;
-        color: $color-blue;
-    }
-    .ss-content .ss-list .ss-option:hover,
-    .ss-content .ss-list .ss-option.ss-highlighted {
-        background-color: $color-blue;
-        color: $color-white;
-    }
-    select.active ~ .ss-main > .ss-single-selected {
-        padding-top: calc(1.7rem + 0.7rem);
-        padding-bottom: 1rem;
+    select {
+        padding: 1rem 1.5rem;
+        display: block;
+        width: 100%;
+        border: 1px solid $color-lightgray3;
+        border-radius: 0.4rem;
+        -webkit-appearance: none;
+        appearance: none;
     }
 }
 /*----------*/
 .b-count {
     padding: 1rem;
     width: 100%;
-    border: 1px solid $color-lightgray3;
+    border: 1px solid $color-lightgray2;
+    background-color: $color-white;
     border-radius: 0.5rem;
     display: flex;
     text-align: center;
