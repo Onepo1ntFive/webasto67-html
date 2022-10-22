@@ -1,0 +1,178 @@
+$headerClass: '.header';
+
+#{$headerClass} {
+    padding: 20px 3000px;
+    margin: 0 -3000px;
+    background-color: #05003a;
+    color: #fff;
+
+    @media (min-width: $breakpoint-tablet) {
+        padding-bottom: 10px;
+    }
+
+    &--transparent {
+        background-color: transparent
+    }
+
+    &__topline {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__logo {
+        order: 2;
+        text-align: center;
+        @media (min-width: $breakpoint-tablet) {
+            width: 50%;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            width: auto;
+            order: 1;
+        }
+        a {
+            &:link,
+            &:visited {
+                display: inline-block;
+                font-size: 2rem;
+                line-height: 1;
+                font-weight: 600;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: #fff;
+            }
+            &:hover {
+                text-decoration: none;
+                color: #fff;
+            }
+            &::after {
+                content: '';
+                margin-top: 5px;
+                display: block;
+                height: 2px;
+                width: 100%;
+                background: linear-gradient(90deg, #1d2440, #9b0800 25%, #d43a00 50%, #f69a0b 75%, #fdbf5c);
+            }
+        }
+    }
+    &__phone {
+        display: none;
+        @media (min-width: $breakpoint-tablet) {
+            display: block;
+        }
+        a {
+            &:link,
+            &:visited {
+                font-size: 16px;
+                font-weight: 700;
+                color: #fff;
+            }
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        span {
+            display: block;
+            margin-left: 5px;
+            font-size: 14px;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.4);
+            @media (min-width: $breakpoint-desktop) {
+                display: inline;
+            }
+        }
+
+        &--1 {
+            order: 1;
+            @media (min-width: $breakpoint-desktop) {
+                order: 2;
+            }
+        }
+        &--2 {
+            order: 3;
+            @media (min-width: $breakpoint-desktop) {
+                order: 3;
+            }
+        }
+    }
+    &__email {
+        width: 33.33%;
+        order: 5;
+        display: none;
+        @media (min-width: $breakpoint-tablet) {
+            display: block;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            order: 4;
+            width: auto;
+        }
+        a {
+            &:link,
+            &:visited {
+                font-size: 14px;
+                text-decoration: none;
+            }
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    &__callback {
+        order: 6;
+        @media (min-width: $breakpoint-desktop) {
+            order: 5;
+        }
+        a {
+            &:link,
+            &:visited {
+                display: block;
+                width: 24px;
+                height: 24px;
+                background: url('../img/main-phone.svg') 50% 50% no-repeat;
+                text-indent: -9999px;
+            }
+            @media (min-width: $breakpoint-tablet) {
+                &:link,
+                &:visited {
+                    width: auto;
+                    height: auto;
+                    padding: 10px 12px;
+                    border: 1px solid rgba(255, 255, 255, 0.7);
+                    border-radius: 4px;
+                    background: none;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    font-weight: 600;
+                    color: rgba(255, 255, 255, 0.7);
+                    vertical-align: middle;
+                    transition-property: border, color;
+                    transition-duration: 0.2s;
+                    line-height: 1;
+                    text-indent: 0;
+                    transition-timing-function: ease-in-out;
+                }
+                &:hover {
+                    border-color: #fff;
+                    text-decoration: none;
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &__menu {
+        order: 1;
+        @media (min-width: $breakpoint-tablet) {
+            width: 33.33%;
+            order: 4;
+        }
+        @media (min-width: $breakpoint-desktop) {
+            width: auto;
+            order: 6;
+            padding-top: 1rem;
+            width: 100%;
+        }
+    }
+}
