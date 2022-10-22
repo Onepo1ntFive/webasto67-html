@@ -13813,6 +13813,62 @@ function readURL(input) {
 "use strict";
 
 (function () {
+  //top menu
+  var $menutopList, $menutopListWrap, $menutopListParent, menutopListHeight, menutopListParent, windowWidth;
+  var hasChilds = document.querySelectorAll('.js-menutop-haschild');
+  Array.prototype.forEach.call(hasChilds, function (hasChild, i) {
+    hasChild.addEventListener('mouseenter', function (event) {
+      var windowWidth = window.innerWidth;
+
+      if (windowWidth >= 768) {
+        var thisChild = event.target;
+        $menutopListWrap = thisChild.parentNode.parentNode;
+        $menutopListParent = thisChild.parentNode;
+        $menutopList = thisChild.querySelector('.js-menutop-child');
+        menutopListParent = $menutopListParent.offsetHeight;
+        menutopListHeight = $menutopList.offsetHeight;
+
+        if (menutopListParent > menutopListHeight) {
+          $menutopListWrap.style.height = menutopListParent + 30 + 'px';
+        } else {
+          $menutopListWrap.style.height = menutopListHeight + 30 + 'px';
+        }
+
+        $menutopListWrap.classList.add("full");
+      }
+    });
+    hasChild.addEventListener('mouseleave', function (event) {
+      var windowWidth = window.innerWidth;
+
+      if (windowWidth >= 768) {
+        var thisChild = event.target;
+        $menutopListWrap = thisChild.parentNode.parentNode;
+        $menutopListWrap.style.height = 'auto';
+        $menutopListWrap.classList.remove("full");
+      }
+    });
+  });
+
+  if (document.querySelector('.js-menu')) {
+    var menuBlocks = document.querySelectorAll('.js-menu');
+    Array.prototype.forEach.call(menuBlocks, function (menuBlock, i) {
+      var menuOpen = menuBlock.querySelector('.js-menu-open');
+
+      if (menuOpen) {
+        menuOpen.addEventListener('click', function () {
+          if (menuBlock.classList.contains('active')) {
+            menuBlock.classList.remove('active');
+          } else {
+            menuBlock.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+})();
+"use strict";
+
+(function () {
   var body = document.querySelector('body');
 
   if (document.querySelector('.js-modal-show-cart')) {
@@ -13886,6 +13942,150 @@ function readURL(input) {
 
     outer.parentNode.removeChild(outer);
     return scrollbarWidth;
+  }
+})();
+"use strict";
+
+(function () {
+  var windowWidth = window.innerWidth;
+
+  function setHeight(el, val) {
+    if (typeof val === "function") val = val();
+    if (typeof val === "string") el.style.height = val;else el.style.height = val + "px";
+  }
+
+  var mainLevel = document.querySelector('.js-menu-main');
+  var menuAchors = document.querySelectorAll('.js-menu-item ins');
+  var menuAchors2 = document.querySelectorAll('.js-menu-item-2 ins');
+  var secondLevel = document.querySelectorAll('.js-menu-next');
+  var thirdLevel = document.querySelectorAll('.js-menu-next-2');
+  var backBtn = document.querySelector('.js-menu-back');
+  var nextLevel = null;
+  var mainLevelHeight = mainLevel.offsetHeight;
+  var nextLevelHeight = null;
+  var prevLevelHeight = null;
+  setHeight(mainLevel, mainLevelHeight);
+  Array.prototype.forEach.call(menuAchors, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (event.target.parentNode.parentNode.classList.contains('js-menu-item')) {
+        nextLevel = event.target.parentNode.nextElementSibling;
+        secondLevel.forEach(function (item, i) {
+          item.classList.remove('active');
+        });
+        nextLevel.classList.add('active');
+        mainLevel.classList.add('active');
+        backBtn.classList.add('active');
+        nextLevelHeight = nextLevel.offsetHeight;
+        prevLevelHeight = nextLevelHeight;
+        setHeight(mainLevel, nextLevelHeight);
+      }
+    });
+  });
+  Array.prototype.forEach.call(menuAchors2, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (event.target.parentNode.parentNode.classList.contains('js-menu-item-2')) {
+        nextLevel = event.target.parentNode.nextElementSibling;
+        thirdLevel.forEach(function (item, i) {
+          item.classList.remove('active');
+        });
+        nextLevel.classList.add('active');
+        mainLevel.classList.add('active-2');
+        backBtn.innerHTML = "\u041D\u0430\u0437\u0430\u0434 \u0432 ".concat(event.target.parentNode.parentNode.parentNode.querySelector('.sidebar__menu-item-spacer a').innerHTML);
+        nextLevelHeight = nextLevel.offsetHeight;
+        setHeight(mainLevel, nextLevelHeight);
+      }
+    });
+  });
+  backBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+
+    if (mainLevel.classList.contains('active-2') && mainLevel.classList.contains('active')) {
+      backBtn.innerHTML = 'Назад в меню';
+      mainLevel.classList.remove('active-2');
+      thirdLevel.forEach(function (item, i) {
+        item.classList.remove('active');
+      });
+      setHeight(mainLevel, prevLevelHeight);
+    } else if (mainLevel.classList.contains('active')) {
+      mainLevel.classList.remove('active');
+      secondLevel.forEach(function (item, i) {
+        item.classList.remove('active');
+      });
+      setHeight(mainLevel, mainLevelHeight);
+      backBtn.innerHTML = 'Назад в меню';
+      backBtn.classList.remove('active');
+    }
+  });
+  var showSidebarBtns = document.querySelectorAll('.js-sidebar-show');
+  var hideSidebarBtns = document.querySelectorAll('.js-sidebar-hide');
+  var body = document.querySelector('body');
+  var clickedEl = null;
+  Array.prototype.forEach.call(showSidebarBtns, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+
+      if (el.classList.contains('active')) {
+        hideSidebar();
+      } else {
+        clickedEl = el;
+        showSidebar();
+      }
+    });
+  });
+  Array.prototype.forEach.call(hideSidebarBtns, function (el, i) {
+    el.addEventListener('click', function (event) {
+      event.preventDefault();
+      hideSidebar();
+    });
+  });
+  var sidebar = document.querySelector('.js-sidebar');
+  var header = document.querySelector('.header');
+
+  function showSidebar() {
+    windowWidth = window.innerWidth;
+
+    if (windowWidth < 1200) {
+      sidebar.style.top = header.getBoundingClientRect().height + 'px';
+      sidebar.classList.add('active');
+      clickedEl.classList.add('active');
+      body.classList.add('ov-h');
+    }
+  }
+
+  function hideSidebar() {
+    sidebar.classList.remove('active');
+    clickedEl.classList.remove('active');
+    body.classList.remove('ov-h');
+    mainLevel.classList.remove('active');
+    mainLevel.classList.remove('active-2');
+    secondLevel.forEach(function (item, i) {
+      item.classList.remove('active');
+    });
+    thirdLevel.forEach(function (item, i) {
+      item.classList.remove('active');
+    });
+    setHeight(mainLevel, mainLevelHeight);
+    backBtn.innerHTML = 'Назад в меню';
+    backBtn.classList.remove('active');
+  }
+
+  if (document.querySelector('.js-menu-collapse')) {
+    var menuCollapseBtns = document.querySelectorAll('.js-menu-collapse ins');
+    var menuCollapseContent = null;
+    Array.prototype.forEach.call(menuCollapseBtns, function (menuCollapseBtn, i) {
+      menuCollapseContent = menuCollapseBtn.parentNode.parentNode.querySelector('.js-menu-collapse-item');
+      console.log(menuCollapseContent);
+      menuCollapseBtn.addEventListener('click', function () {
+        menuCollapseBtn.parentNode.parentNode.classList.toggle('active');
+        slideToggle(menuCollapseContent);
+      });
+    });
   }
 })();
 "use strict";
