@@ -14,3 +14,5 @@
 - https://onepo1ntfive.github.io/webasto67-html/catalog-list.html
 - https://onepo1ntfive.github.io/webasto67-html/catalog-gallery.html
 - https://onepo1ntfive.github.io/webasto67-html/catalog-detail.html
+- https://onepo1ntfive.github.io/webasto67-html/header.html
+- https://onepo1ntfive.github.io/webasto67-html/header-transparent.html
